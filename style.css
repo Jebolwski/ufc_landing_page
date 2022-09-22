@@ -1,0 +1,297 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  overflow-x: hidden;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+@font-face {
+  font-family: custom_font;
+  src: url("../fonts/DIN2014-NarrowBold.woff");
+}
+
+.whole_div {
+  height: 100vh;
+  width: 100vw;
+  background-size: 100%;
+}
+
+.whole_div__img {
+  width: 100%;
+  position: absolute;
+  top: -5vh !important;
+  left: 0;
+  z-index: -1;
+}
+
+.top-header {
+  position: absolute;
+  top: 2.625rem;
+  background-color: white;
+  height: 66px;
+  max-width: 76.25rem;
+  animation: top-header 0.8s ease-in;
+}
+
+.top-header p:hover {
+  color: #d20a0a;
+}
+
+.top-header-after {
+  width: 36px;
+  transition: 0.7s;
+  position: absolute;
+  left: 47.6%;
+  bottom: 0;
+  height: 2px;
+  background-color: #d20a0a;
+  animation: top-header-after 0.8s ease-in;
+}
+
+.top-header p {
+  font-family: "custom_font";
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer !important;
+  padding: 25px 14px;
+}
+
+.top-header svg {
+  margin-left: 29px;
+}
+
+.top-header svg:hover {
+  color: #d20a0a;
+}
+
+.header-responsive {
+  margin-top: 66px;
+  padding-top: 30px;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  z-index: 1000 !important;
+  width: 100%;
+}
+
+.header-responsive h5 {
+  font-weight: 900;
+  margin-top: 23px;
+  cursor: pointer;
+}
+
+.whole_div__text {
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-family: bolder;
+  text-align: center;
+  top: 34vh;
+}
+
+.whole_div__text h3 {
+  font-size: 21px;
+  margin-top: 10px;
+}
+
+.whole_div__text h1 {
+  font-size: 68px;
+}
+
+.read_more_button {
+  background-color: white;
+  margin-top: 60px;
+  padding: 17px 45px;
+  font-size: 15px;
+  font-weight: bolder;
+  outline: 0;
+  border: 0;
+  z-index: 1 !important;
+  transition: 0.4s;
+  outline: 1px solid white;
+}
+
+.read_more_button:hover {
+  box-shadow: inset 200px 0 0 0 black;
+  color: white;
+  transition: 0.4s;
+}
+
+@keyframes top-header {
+  from {
+    height: 3px;
+  }
+  to {
+    height: 66px;
+  }
+}
+
+@keyframes top-header-after {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .top-header {
+    top: 0;
+  }
+
+  .whole_div__text h3 {
+    font-size: 16px !important;
+    margin-top: 10px;
+  }
+
+  .whole_div__text h2 {
+    font-size: 20px !important;
+  }
+
+  .whole_div__text h1 {
+    font-size: 42px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .top-header {
+    top: 0;
+  }
+
+  .whole_div__text h3 {
+    font-size: 13px !important;
+    margin-top: 10px;
+  }
+
+  .whole_div__text h2 {
+    font-size: 16px !important;
+  }
+
+  .whole_div__text h1 {
+    font-size: 30px !important;
+  }
+  .whole_div__text {
+    top: 25vh;
+  }
+}

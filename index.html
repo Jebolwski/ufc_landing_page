@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../assets/bootstrap-5.2.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fontawesome-6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="whole_div">
+      <img
+        src="https://www.ufc.com/s3/files/styles/background_image_lg/s3/image/2022-09/092122-Hero-Charles-Oliveira-vs-Chandler-Glove-Touch-GettyImages-1318244800.jpg?h=d1cb525d&itok=PuAwR4Ih"
+        class="whole_div__img"
+      />
+      <div class="row justify-content-center">
+        <header class="top-header container-fluid px-4">
+          <div class="top-header-after"></div>
+          <div
+            class="row justify-content-between align-items-center px-2"
+            style="height: 66px !important"
+          >
+            <div class="col-auto d-none d-lg-block">
+              <div class="d-flex align-items-center">
+                <p class="events">EVENTS</p>
+                <p class="rankings">RANKINGS</p>
+                <p class="athletes">ATHLETES</p>
+                <p class="news">NEWS</p>
+              </div>
+            </div>
+
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="https://uploads-ssl.webflow.com/60ce00c5e643ddece292befd/60d52e5c8eb80309f9bac83c_UFC%20Logo.png"
+                style="width: 62px"
+                class="ufc_icon"
+              />
+            </div>
+
+            <div class="col-auto d-none d-lg-block">
+              <div class="d-flex align-items-center">
+                <p class="videos">VIDEOS</p>
+                <p class="connect">CONNECT</p>
+                <p class="watch">WATCH</p>
+                <p class="shop">SHOP</p>
+                <i class="fa-solid fa-search search_icon"></i>
+              </div>
+            </div>
+
+            <div class="col-auto d-block d-lg-none">
+              <img
+                src="https://uploads-ssl.webflow.com/60ce00c5e643ddece292befd/60d52e5c8eb80309f9bac83c_UFC%20Logo.png"
+                style="width: 62px"
+                class="ufc_icon"
+              />
+            </div>
+
+            <div class="col-auto d-block d-lg-none">
+              <div class="d-flex align-items-center menu-top">
+                <p style="padding: 0 5px !important">MENU</p>
+                <i class="fa-solid fa-chevron-down ms-0 fa-sm"></i>
+              </div>
+            </div>
+
+            <div class="col-auto d-block d-lg-none">
+              <i class="fa-solid fa-search"></i>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="header-responsive" style="display: none">
+        <h5>EVENTS</h5>
+        <h5>RANKINGS</h5>
+        <h5>ATHLETES</h5>
+        <h5>NEWS</h5>
+        <h5>VIDEOS</h5>
+        <h5>CONNECT</h5>
+        <h5>WATCH</h5>
+        <h5>SHOP</h5>
+      </div>
+      <div class="whole_div__text">
+        <h2>UFC 280: OLIVIERA vs MAKHACHEV</h2>
+        <h1>VACANT TITLE FIGHTS</h1>
+        <h3>
+          Revisit Historic Vacant Title Fights One Month Away From UFC 280
+        </h3>
+
+        <div class="d-flex align-items-center gap-3 justify-content-center">
+          <button class="read_more_button">READ MORE</button>
+          <button class="read_more_button">ORDER UFC 280</button>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/bootstrap-5.2.1/js/bootstrap.min.js"></script>
+    <script src="../assets/fontawesome-6.2.0/js/all.min.js"></script>
+    <script src="../assets/jquery/jquery.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(window).resize(function () {
+        if ($(window).width() < 996) {
+          $(".top-header").css("top", 0);
+          $(".whole_div__img").css("top", 66);
+        } else {
+          $(".header-responsive").hide(0);
+          $(".top-header").css("top", "2.625rem");
+          $(".whole_div__img").css("top", 0);
+        }
+      });
+
+      $(".events").hover(
+        function () {
+          $(".top-header-after").css("left", "4%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".rankings").hover(
+        function () {
+          $(".top-header-after").css("left", "11%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".athletes").hover(
+        function () {
+          $(".top-header-after").css("left", "18.4%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".news").hover(
+        function () {
+          $(".top-header-after").css("left", "24.8%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".videos").hover(
+        function () {
+          $(".top-header-after").css("left", "71.4%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".connect").hover(
+        function () {
+          $(".top-header-after").css("left", "77.5%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".watch").hover(
+        function () {
+          $(".top-header-after").css("left", "84.3%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".shop").hover(
+        function () {
+          $(".top-header-after").css("left", "89.8%");
+        },
+        function () {
+          $(".top-header-after").css("left", "47.6%");
+        }
+      );
+
+      $(".ufc_icon").hover(
+        function () {
+          $(".top-header-after").css("width", 47);
+          $(".top-header-after").css("left", "47.3%");
+          $(".top-header-after").css("transition", "0.2s");
+        },
+        function () {
+          $(".top-header-after").css("transition", "0.5s");
+          $(".top-header-after").css("left", "47.6%");
+          $(".top-header-after").css("width", 36);
+        }
+      );
+
+      $(".menu-top").click(function () {
+        $(".header-responsive").toggle(100);
+      });
+    </script>
+  </body>
+</html>
