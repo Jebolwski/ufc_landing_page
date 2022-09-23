@@ -130,6 +130,11 @@ table {
   src: url("../fonts/DIN2014-NarrowBold.woff");
 }
 
+@font-face {
+  font-family: bold_font;
+  src: url("../fonts/KlavikaWebBoldCond.woff2");
+}
+
 .whole_div {
   height: 100vh;
   width: 100vw;
@@ -150,7 +155,7 @@ table {
   background-color: white;
   height: 66px;
   max-width: 76.25rem;
-  animation: top-header 0.8s ease-in;
+  animation: top-header 1.5s ease-in;
 }
 
 .top-header p:hover {
@@ -204,7 +209,8 @@ table {
   position: absolute;
   width: 100%;
   color: white;
-  font-family: bolder;
+  font-family: "bold_font";
+  font-weight: 900;
   text-align: center;
   top: 34vh;
 }
@@ -212,9 +218,15 @@ table {
 .whole_div__text h3 {
   font-size: 21px;
   margin-top: 10px;
+  font-weight: 900;
+}
+
+.whole_div__text h2 {
+  font-weight: 900;
 }
 
 .whole_div__text h1 {
+  font-weight: 900;
   font-size: 68px;
 }
 
@@ -237,11 +249,54 @@ table {
   transition: 0.4s;
 }
 
+.top-header__search_div {
+  width: 100%;
+  position: absolute;
+  top: calc(2.625rem + 66px);
+  background-color: white;
+  width: 76.25rem;
+}
+
+.top-header__search_div input {
+  background-color: white;
+  width: 100%;
+  height: 44px;
+  caret-color: #d20a0a;
+  outline: 0;
+  border: 0;
+}
+
+.top-header__search_div:hover {
+  box-shadow: 0 0 5px rgb(145, 145, 145);
+}
+
+.top-header__search_div i {
+  height: 44px;
+}
+
+.top-header__hover_div {
+  width: 100%;
+  position: absolute;
+  top: calc(2.625rem + 55px);
+  background-color: #c0c0c0;
+  height: 44px;
+  width: 76.25rem;
+}
+
+.top-header__hover_div p {
+  font-size: 16px;
+}
+
 @keyframes top-header {
-  from {
+  0% {
     height: 3px;
+    transform: scaleX(0);
   }
-  to {
+  50% {
+    height: 3px;
+    transform: scaleX(1);
+  }
+  100% {
     height: 66px;
   }
 }
@@ -258,6 +313,14 @@ table {
 @media only screen and (max-width: 992px) {
   .top-header {
     top: 0;
+  }
+
+  .top-header__search_div {
+    top: 66px;
+  }
+
+  .top-header__hover_div {
+    top: 66px;
   }
 
   .whole_div__text h3 {
