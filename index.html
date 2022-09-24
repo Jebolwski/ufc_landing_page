@@ -90,7 +90,68 @@
             </div>
           </div>
         </div>
-        <div class="top-header__hover_div" style="display: none"></div>
+        <div class="top-header__hover_div_events events" style="display: none">
+          <div
+            class="d-flex align-items-center justify-content-start"
+            style="height: 44px"
+          >
+            <p class="mx-3">UPCOMING</p>
+            <p class="mx-3">PAST</p>
+            <p class="mx-3">TICKETS</p>
+            <p class="mx-3">VIP EXPERIENCES</p>
+            <p class="mx-3">GROUP SALES</p>
+          </div>
+        </div>
+        <div
+          class="top-header__hover_div_athletes athletes"
+          style="display: none"
+        >
+          <div
+            class="d-flex align-items-center justify-content-start"
+            style="height: 44px"
+          >
+            <p class="mx-3">ALL ATHLETES</p>
+            <p class="mx-3">RECORD BOOK</p>
+          </div>
+        </div>
+        <div
+          class="top-header__hover_div_connect connect"
+          style="display: none"
+        >
+          <div
+            class="d-flex align-items-center justify-content-end"
+            style="height: 44px"
+          >
+            <p>NEWSLETTER</p>
+            <p class="mx-3"></p>
+            <p class="mx-3">UFC APEX</p>
+            <p class="mx-3">UFC ULTIMATE SOUND</p>
+            <p class="mx-3">FIND A GYM</p>
+            <p class="mx-3">EA SPORTS™ UFC® MOBILE 2</p>
+            <p class="mx-3">EA SPORTS UFC 4</p>
+            <p class="mx-3">BETTING ODDS</p>
+          </div>
+        </div>
+        <div class="top-header__hover_div_watch watch" style="display: none">
+          <div
+            class="d-flex align-items-center justify-content-end"
+            style="height: 44px"
+          >
+            <p>HOW TO WATCH</p>
+            <p class="mx-3">FIND A BAR</p>
+            <p class="mx-3">UFC FIGHT PASS</p>
+          </div>
+        </div>
+        <div class="top-header__hover_div_shop shop" style="display: none">
+          <div
+            class="d-flex align-items-center justify-content-end"
+            style="height: 44px"
+          >
+            <p>UFC STORE</p>
+            <p class="mx-3">NFT</p>
+            <p class="mx-3">UFC COLLECTIBLES</p>
+          </div>
+        </div>
       </div>
       <div class="header-responsive" style="display: none">
         <h5>EVENTS</h5>
@@ -134,8 +195,10 @@
       $(".events").hover(
         function () {
           $(".top-header-after").css("left", "4%");
+          $(".top-header__hover_div_events").show(0);
         },
         function () {
+          $(".top-header__hover_div_events").hide(0);
           $(".top-header-after").css("left", "47.6%");
         }
       );
@@ -161,8 +224,10 @@
       $(".news").hover(
         function () {
           $(".top-header-after").css("left", "24.8%");
+          $(".top-header__hover_div_news").show(0);
         },
         function () {
+          $(".top-header__hover_div_news").show(0);
           $(".top-header-after").css("left", "47.6%");
         }
       );
@@ -170,8 +235,10 @@
       $(".videos").hover(
         function () {
           $(".top-header-after").css("left", "71.4%");
+          $(".top-header__hover_div_videos").show(0);
         },
         function () {
+          $(".top-header__hover_div_videos").hide(0);
           $(".top-header-after").css("left", "47.6%");
         }
       );
@@ -179,8 +246,10 @@
       $(".connect").hover(
         function () {
           $(".top-header-after").css("left", "77.5%");
+          $(".top-header__hover_div_connect").show(0);
         },
         function () {
+          $(".top-header__hover_div_connect").hide(0);
           $(".top-header-after").css("left", "47.6%");
         }
       );
@@ -188,8 +257,10 @@
       $(".watch").hover(
         function () {
           $(".top-header-after").css("left", "84.3%");
+          $(".top-header__hover_div_watch").show(0);
         },
         function () {
+          $(".top-header__hover_div_watch").hide(0);
           $(".top-header-after").css("left", "47.6%");
         }
       );
@@ -197,8 +268,10 @@
       $(".shop").hover(
         function () {
           $(".top-header-after").css("left", "89.8%");
+          $(".top-header__hover_div_shop").show(0);
         },
         function () {
+          $(".top-header__hover_div_shop").hide(0);
           $(".top-header-after").css("left", "47.6%");
         }
       );
@@ -224,88 +297,14 @@
         $(".top-header__search_div").toggle(0);
       });
 
-      $(".events").hover(
-        function () {
-          $(".top-header__hover_div")
-            .html(`<div class="d-flex align-items-center events athletes connect watch shop justify-content-start" style="height:44px">
-                    <p class="mx-3">UPCOMING</p>
-                    <p class="mx-3">PAST</p>
-                    <p class="mx-3">TICKETS</p>
-                    <p class="mx-3">VIP EXPERIENCES</p>
-                    <p class="mx-3">GROUP SALES</p>
-                  </div>`);
-          $(".top-header__hover_div").show(0);
-        },
-        function () {
-          $(".top-header__hover_div").hide(0);
-        }
-      );
-
       $(".athletes").hover(
         function () {
-          $(".top-header__hover_div")
-            .html(`<div class="d-flex align-items-center events athletes connect watch shop justify-content-start" style="height:44px">
-                    <p class="mx-3">ALL ATHLETES</p>
-                    <p class="mx-3">RECORD BOOK</p>
-                  </div>`);
-          $(".top-header__hover_div").show(0);
+          $(".top-header__hover_div_athletes").show(0);
         },
         function () {
-          $(".top-header__hover_div").hide(0);
+          $(".top-header__hover_div_athletes").hide(0);
         }
       );
-
-      $(".connect").hover(
-        function () {
-          $(".top-header__hover_div")
-            .html(`<div class="d-flex align-items-center events athletes connect watch shop justify-content-end" style="height:44px">
-                    <p>NEWSLETTER</p>
-                    <p class="mx-3"></p>
-                    <p class="mx-3">UFC APEX</p>
-                    <p class="mx-3">UFC ULTIMATE SOUND</p>
-                    <p class="mx-3">FIND A GYM</p>
-                    <p class="mx-3">EA SPORTS™ UFC® MOBILE 2</p>
-                    <p class="mx-3">EA SPORTS UFC 4</p>
-                    <p class="mx-3">BETTING ODDS</p>
-                  </div>`);
-          $(".top-header__hover_div").show(0);
-        },
-        function () {
-          $(".top-header__hover_div").hide(0);
-        }
-      );
-
-      $(".watch").hover(
-        function () {
-          $(".top-header__hover_div")
-            .html(`<div class="d-flex align-items-center events athletes connect watch shop justify-content-end" style="height:44px">
-                    <p>HOW TO WATCH</p>
-                    <p class="mx-3">FIND A BAR</p>
-                    <p class="mx-3">UFC FIGHT PASS</p>
-                  </div>`);
-          $(".top-header__hover_div").show(0);
-        },
-        function () {
-          $(".top-header__hover_div").hide(0);
-        }
-      );
-
-      $(".shop").hover(
-        function () {
-          $(".top-header__hover_div").html(`
-                  <div class="d-flex align-items-center events athletes connect watch shop justify-content-end" style="height:44px">
-                    <p>UFC STORE</p>
-                    <p class="mx-3">NFT</p>
-                    <p class="mx-3">UFC COLLECTIBLES</p>
-                  </div>`);
-
-          $(".top-header__hover_div").show(0);
-        },
-        function () {
-          $(".top-header__hover_div").hide(0);
-        }
-      );
-      //
     </script>
   </body>
 </html>
